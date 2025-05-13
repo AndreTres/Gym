@@ -416,10 +416,28 @@ section h2 {
 }
 
   @media (max-width: 768px) {
+    header .container {
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
   .menu {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .menu a {
+  font-size: 18px;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 16px;
     margin-top: 10px;
   }
 
@@ -502,11 +520,6 @@ section h2 {
     font-size: 24px;
     bottom: 20px;
     right: 20px;
-  }
-
-  .cta-button {
-    padding: 10px 18px;
-    font-size: 16px;
   }
 
   footer .footer-content h2 {
