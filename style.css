@@ -428,6 +428,10 @@ section h2 {
     align-items: center;
   }
 
+  .benefit-cards:last-child {
+    margin-bottom: 0px;
+  }
+
   .card {
     width: 90%;
     max-width: 320px;
