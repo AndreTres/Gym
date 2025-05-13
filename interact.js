@@ -48,3 +48,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+let lastScrollY = window.scrollY;
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 150) {
+    // Rolando para baixo e já ultrapassou o topo
+    header.style.transform = "translateY(-100%)";
+  } else {
+    // Rolando para cima
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollY = currentScrollY;
+});
