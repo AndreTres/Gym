@@ -57,12 +57,13 @@ section h2 {
   .menu a {
     color: #f1f1f1;
     font-size: 18px;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
   }
   
   .menu a:hover {
-    color: #e63946;
+    color: #ff2c40;
   }
   
   .cta-button {
@@ -447,7 +448,8 @@ section h2 {
   }
 
   .benefit-cards:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 
   .card {
