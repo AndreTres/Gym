@@ -627,9 +627,6 @@ section h2 {
     padding: 16px 12px;
   }
 
-  .faq {
-    padding-bottom: 40px;
-  }
   .video-container {
     width: 100%;
     max-width: 100%;
@@ -655,6 +652,10 @@ section h2 {
 
   .faq-item p {
     font-size: 15px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 20px;
   }
 
   .whatsapp-float {
