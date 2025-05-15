@@ -271,32 +271,43 @@ section h2 {
   transform: scale(1.05);
 }
 
-  .video-title {
+  .video-section {
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  margin-bottom: 0 auto 40px;
+}
+
+.video-title {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  font-weight: bold !important;
   font-size: 1.6rem;
-  font-weight: 600;
 }
 
 .video-container {
   width: 100%;
-  max-width: 500px; 
-  margin: 0 auto;
-  margin-top: 20px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  border-radius: 15px;
+  aspect-ratio: 9 / 16;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: contain;
 }
 
 .video-container video {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  object-fit: cover;
-  display: block;
-  line-height: 0;
+  object-fit: contain;
 }
 
 .video-container:hover {
@@ -428,10 +439,10 @@ section h2 {
 .theme-toggle {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 20px;
   color: #e63946;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 30px;
   transition: transform 0.2s ease;
 }
 
@@ -548,6 +559,27 @@ section h2 {
     aspect-ratio: 1 / 1;
   }
 
+  .video-section,
+  .form-section,
+  .faq {
+  padding: 16px 12px;
+}
+
+  .video-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    box-shadow: none;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    object-fit: cover;
+  }
+
+  .video-wrapper {
+    padding: 0 10px;
+  }
+
   .faq-item {
     padding: 20px 20px;
   }
@@ -587,7 +619,7 @@ section h2 {
   }
 } 
 
-  body.light-mode {
+ body.light-mode {
   background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
   color: #222;
 }
@@ -607,6 +639,30 @@ body.light-mode .menu a:hover {
   color: #c72c3a;
 }
 
+body.light-mode .start {
+  background: linear-gradient(to bottom, #ffffff, #f5f5f5) !important;
+}
+
+body.light-mode .start h1,
+body.light-mode section h2,
+body.light-mode .video-title {
+  color: #e63946;
+}
+
+body.light-mode .start p,
+body.light-mode .program-structure p,
+body.light-mode .form-section p,
+body.light-mode .benefit-cards p,
+body.light-mode .faq-item p,
+body.light-mode .faq-item h4,
+body.light-mode .program-structure li {
+  color: #000;
+}
+
+body.light-mode .section-divider {
+ display: none;
+}
+
 body.light-mode .card,
 body.light-mode .faq-item,
 body.light-mode .structure-box {
@@ -614,18 +670,6 @@ body.light-mode .structure-box {
   color: #222;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-left: 4px solid #e63946;
-}
-
-body.light-mode section h2,
-body.light-mode .video-title,
-body.light-mode .start h1 {
-  color: #e63946;
-}
-
-body.light-mode section p,
-body.light-mode .faq-item p,
-body.light-mode .card p {
-  color: #444;
 }
 
 body.light-mode footer {
