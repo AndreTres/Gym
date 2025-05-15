@@ -466,29 +466,29 @@ section h2 {
     font-weight: bold;
     text-align: center;
     color: #e63946;
-}
+  }
 
-.header-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  margin-top: 10px;
-}
+  .header-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
 
-.theme-toggle {
-  background: none;
-  border: none;
-  align-self: start;
-  margin-right: 40px;
-  font-size: 22px;
-  color: #e63946;
-  margin-top: 10px;
-  cursor: pointer;
-}
+  .theme-toggle {
+    background: none;
+    border: none;
+    align-self: start;
+    margin-right: 40px;
+    font-size: 22px;
+    color: #e63946;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 
   .menu-toggle {
-     display: block;
+    display: block;
     background: none;
     border: none;
     font-size: 28px;
@@ -498,10 +498,10 @@ section h2 {
     top: 15px;
     right: 15px;
     z-index: 1100;
-  } 
+  }
 
   .menu {
-   flex-wrap: wrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     display: none;
@@ -511,13 +511,13 @@ section h2 {
     text-align: center;
     padding: 20px 0;
     position: absolute;
-    top: 65px; 
+    top: 65px;
     left: 0;
     z-index: 1000;
     border-top: 1px solid #e63946;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 12px 12px;
-}
+  }
 
   .menu.active {
     display: flex;
@@ -529,7 +529,7 @@ section h2 {
     padding: 8px 0;
   }
 
- .cta-button {
+  .cta-button {
     background-color: #e63946;
     color: #fff;
     border-radius: 40px;
@@ -547,7 +547,6 @@ section h2 {
     transform: scale(1.05);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
-}
 
   .benefit-cards {
     flex-direction: column;
@@ -614,8 +613,8 @@ section h2 {
   .video-section,
   .form-section,
   .faq {
-  padding: 16px 12px;
-}
+    padding: 16px 12px;
+  }
 
   .video-container {
     width: 100%;
@@ -644,9 +643,9 @@ section h2 {
     font-size: 15px;
   }
 
-   .faq-item:last-child {
-  margin-bottom: -60px; 
-}
+  .faq-item:last-child {
+    margin-bottom: -60px;
+  }
 
   .whatsapp-float {
     width: 50px;
@@ -673,7 +672,7 @@ section h2 {
   .section-divider {
     height: 30px;
   }
-} 
+}
 
  body.light-mode {
   background: linear-gradient(180deg, #ffffff 0%, #f4f4f4 100%);
