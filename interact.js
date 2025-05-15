@@ -65,3 +65,32 @@ window.addEventListener("scroll", () => {
 
   lastScrollY = currentScrollY;
 });
+
+// Menu Responsivo
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+  menu.classList.toggle('active');
+});
+
+// Tema Claro/Escuro
+const themeToggle = document.querySelector('.theme-toggle');
+const icon = themeToggle.querySelector('i');
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Aplica o tema salvo ou padrão claro
+if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !prefersDark)) {
+  document.body.classList.add('light-mode');
+  icon.classList.remove('fa-moon');
+  icon.classList.add('fa-sun');
+}
+
+// Alternar tema ao clicar
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  icon.classList.toggle('fa-sun', isLight);
+  icon.classList.toggle('fa-moon', !isLight);
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
