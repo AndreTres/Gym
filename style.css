@@ -642,6 +642,10 @@ section h2 {
     padding: 0 10px;
   }
 
+  .faq {
+  padding-bottom: 20px;
+  }    
+
   .faq-item {
     padding: 20px 20px;
   }
@@ -652,10 +656,6 @@ section h2 {
 
   .faq-item p {
     font-size: 15px;
-  }
-
-  .faq-item:last-child {
-    margin-bottom: -100px;
   }
 
   .whatsapp-float {
