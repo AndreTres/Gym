@@ -655,8 +655,7 @@ section h2 {
   }
 
   .faq-item:last-child {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+    margin-bottom: 20px;
   }
 
   .whatsapp-float {
