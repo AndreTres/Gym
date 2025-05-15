@@ -547,6 +547,18 @@ section h2 {
     padding: 8px 0;
   }
 
+   body.light-mode .menu {
+    background-color: #ffffff;
+  }
+
+  body.light-mode .menu a {
+    color: #e63946;
+  }
+
+  body.light-mode .menu a:hover {
+    color: #c72c3a;
+  }
+
   .benefit-cards {
     flex-direction: column;
     align-items: center;
@@ -643,7 +655,7 @@ section h2 {
   }
 
   .faq-item:last-child {
-    margin-bottom: -60px;
+    margin-bottom: 40px;
   }
 
   .whatsapp-float {
