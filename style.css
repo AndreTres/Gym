@@ -476,10 +476,11 @@ section h2 {
 .theme-toggle {
   background: none;
   border: none;
+  align-self: start;
+  margin-left: 20px;
   font-size: 22px;
   color: #e63946;
   margin-top: 10px;
-  margin-left: 80px;
   cursor: pointer;
 }
 
