@@ -42,6 +42,12 @@ section h2 {
     justify-content: space-between;
     align-items: center;
   }
+
+  .header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
   
   .logo {
     font-size: 26px;
@@ -468,19 +474,11 @@ section h2 {
     color: #e63946;
   }
 
-  .header-actions {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
   .theme-toggle {
     background: none;
     border: none;
-    align-self: start;
-    margin-right: 240px;
+    align-self: center;
+    margin: 0;
     font-size: 22px;
     color: #e63946;
     margin-top: 10px;
@@ -527,25 +525,6 @@ section h2 {
     font-size: 18px;
     color: #fff;
     padding: 8px 0;
-  }
-
-  .cta-button {
-    background-color: #e63946;
-    color: #fff;
-    border-radius: 40px;
-    font-size: 16px;
-    padding: 10px 22px;
-    text-decoration: none;
-    display: inline-block;
-    font-weight: 600;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
-  }
-
-  .cta-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   }
 
   .benefit-cards {
