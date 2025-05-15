@@ -10,19 +10,25 @@
 </head>
 <body>
 
-  <header>
-    <div class="container header-container">
-      <div class="logo">Projeto CAP</div>
-      <nav class="menu">
-        <a href="#inicio">Início</a>
-        <a href="#beneficios">Benefícios</a>
-        <a href="#estrutura">Treinos</a>
-        <a href="#faq">Dúvidas</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <a href="#form" class="cta-button">Transforme-se</a>
-    </div>
-  </header>
+ <header>
+  <div class="container header-container">
+    <div class="logo">projeto CAP</div>
+    <button class="menu-toggle" aria-label="Abrir menu">
+      <i class="fas fa-bars"></i>
+    </button>
+    <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
+      <i class="fas fa-moon"></i>
+    </button>
+    <nav class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#beneficios">Benefícios</a>
+      <a href="#estrutura">Treinos</a>
+      <a href="#faq">Dúvidas</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#form" class="cta-button">Transforme-se</a>
+  </div>
+</header>
 
   <section id="inicio" class="start">
     <div class="container">
@@ -87,7 +93,7 @@
 
 <h2 class="video-title">Cada treino te leva para mais perto de sua melhor versão!</h2>
         <div class="video-container">
-        <video controls autoplay muted loop aria-label="Vídeo de apresentação do programa de treino">
+        <video controls autoplay muted loop playsinline aria-label="Vídeo de apresentação do programa de treino">
           <source src="videos/Academy.mp4" type="video/mp4">
           Seu navegador não suporta a tag de vídeo.
         </video>
@@ -134,7 +140,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 Projeto CAP. Todos os direitos reservados.</p>
+      <p>© 2025 projeto CAP. Todos os direitos reservados.</p>
       <p>Desenvolvido por André Tres.</p>
     </div>
   </footer>
