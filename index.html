@@ -16,9 +16,6 @@
     <button class="menu-toggle" aria-label="Abrir menu">
       <i class="fas fa-bars"></i>
     </button>
-    <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
-      <i class="fas fa-moon"></i>
-    </button>
     <nav class="menu">
       <a href="#inicio">Início</a>
       <a href="#beneficios">Benefícios</a>
@@ -26,9 +23,15 @@
       <a href="#faq">Dúvidas</a>
       <a href="#contato">Contato</a>
     </nav>
-    <a href="#form" class="cta-button">Transforme-se</a>
+    <div class="header-actions">
+      <a href="#form" class="cta-button">Transforme-se</a>
+      <button class="theme-toggle" aria-label="Alternar modo claro/escuro">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
   </div>
 </header>
+
 
   <section id="inicio" class="start">
     <div class="container">
@@ -76,28 +79,30 @@
   </section>  
 
   <section id="form" class="form-section">
-  <div class="container form-container">
-    <div class="valor">
+    <div class="container form-container">
+      <div class="valor">
         <img src="valor.png" alt="Imagem promocional de 50% de desconto">
       </div>
       <div class="form-content">
         <h2>🚀 <span>Pronto para Começar?</span></h2>
-        <p>Responda ao formulário e descubra como acelerar seus resultados com um método inteligente.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfgAArZE9Wu-2IosKle_cTL__g8ZnQyWb2ELnBczdfZ9M3Dsw/viewform?usp=header" target="_blank" class="form-button">Responder Formulário</a>
+        <p>Responda o formulário e descubra como melhorar seus resultados com um método inteligente.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfvKeWkzVuTwVWBjLZcligXVV7os0W_3yeGWp4YeivZIzzNvQ/viewform?usp=header" target="_blank" class="form-button">Responder Formulário</a>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
 
   <div class="section-divider"></div>
 
-<h2 class="video-title">Cada treino te leva para mais perto de sua melhor versão!</h2>
-        <div class="video-container">
-        <video controls autoplay muted loop playsinline aria-label="Vídeo de apresentação do programa de treino">
-          <source src="videos/Academy.mp4" type="video/mp4">
-          Seu navegador não suporta a tag de vídeo.
-        </video>
-      </div>
+  <section class="video-section">
+    <h2 class="video-title" aria-label="Vídeo motivacional">Cada treino te leva para mais perto de sua melhor versão!</h2>
+    <div class="video-wrapper">
+      <video class="video-container" controls autoplay muted loop playsinline aria-label="Vídeo Demonstrativo">
+        <source src="videos/Academy.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+    </div>
+  </section>
 
   <div class="section-divider"></div>
 
