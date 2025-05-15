@@ -627,6 +627,9 @@ section h2 {
     padding: 16px 12px;
   }
 
+  .faq {
+    padding-bottom: 10px;
+  }
   .video-container {
     width: 100%;
     max-width: 100%;
