@@ -467,6 +467,18 @@ section h2 {
     text-align: center;
   }
 
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .header-right {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
   .logo {
     font-size: 22px;
     font-weight: bold;
@@ -496,6 +508,11 @@ section h2 {
     top: 15px;
     right: 15px;
     z-index: 1100;
+  }
+
+  .cta-button {
+    width: 200px;
+    text-align: center;
   }
 
   .menu {
