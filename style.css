@@ -453,10 +453,26 @@ section h2 {
 @media (max-width: 768px) {
   header .container {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     align-items: center;
     text-align: center;
   }
+
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #e63946;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #e63946;
+  margin-top: 10px;
+  cursor: pointer;
+}
 
   .menu-toggle {
     display: block;
@@ -498,10 +514,14 @@ section h2 {
   }
 
   .cta-button {
-    padding: 10px 20px;
+    background-color: #e63946;
+    color: #fff;
+    border-radius: 40px;
     font-size: 16px;
-    margin-top: 10px;
-  }
+    padding: 10px 22px;
+    text-decoration: none;
+    display: inline-block;
+}
 
   .benefit-cards {
     flex-direction: column;
