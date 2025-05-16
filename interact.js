@@ -1,10 +1,11 @@
-// 1. Fade-in suave quando os elementos entram na tela
+// 1. Fade-in Animation ao entrar na tela
 const fadeElements = document.querySelectorAll('.fade-in');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
   });
 }, {
@@ -13,32 +14,7 @@ const observer = new IntersectionObserver((entries) => {
 
 fadeElements.forEach(el => observer.observe(el));
 
-
-// 2. Destaque automático no menu com base na seção visível
-const sections = document.querySelectorAll('section[id]');
-const menuLinks = document.querySelectorAll('.menu a');
-
-window.addEventListener('scroll', () => {
-  let scrollY = window.pageYOffset;
-
-  sections.forEach(current => {
-    const sectionTop = current.offsetTop - 80;
-    const sectionHeight = current.offsetHeight;
-    const sectionId = current.getAttribute('id');
-
-    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-      menuLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${sectionId}`) {
-          link.classList.add('active');
-        }
-      });
-    }
-  });
-});
-
-
-// 3. Scroll suave para seções
+// 2. Scroll suave para âncoras
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -49,24 +25,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-let lastScrollY = window.scrollY;
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY > lastScrollY && currentScrollY > 150) {
-    // Rolando para baixo e já ultrapassou o topo
-    header.style.transform = "translateY(-100%)";
-  } else {
-    // Rolando para cima
-    header.style.transform = "translateY(0)";
-  }
-
-  lastScrollY = currentScrollY;
-});
-
-// Menu Responsivo
+// 3. Menu responsivo (abre e fecha)
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
@@ -74,23 +33,71 @@ menuToggle.addEventListener('click', () => {
   menu.classList.toggle('active');
 });
 
-// Tema Claro/Escuro
+// 4. Fechar o menu ao clicar em link (mobile)
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  });
+});
+
+// 5. Tema Claro/Escuro com memória local
 const themeToggle = document.querySelector('.theme-toggle');
 const icon = themeToggle.querySelector('i');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-// Aplica o tema salvo ou padrão claro
 if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !prefersDark)) {
   document.body.classList.add('light-mode');
   icon.classList.remove('fa-moon');
   icon.classList.add('fa-sun');
 }
 
-// Alternar tema ao clicar
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light-mode');
   const isLight = document.body.classList.contains('light-mode');
   icon.classList.toggle('fa-sun', isLight);
   icon.classList.toggle('fa-moon', !isLight);
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
+// 6. Scroll otimizado: ativa menu e esconde/mostra header (com debounce)
+const sections = document.querySelectorAll('section[id]');
+const menuLinks = document.querySelectorAll('.menu a');
+const header = document.querySelector('header');
+
+let lastScrollY = window.scrollY;
+let scrollTimeout;
+
+function handleScroll() {
+  const scrollY = window.pageYOffset;
+
+  // 6.1 Ativa link do menu conforme a seção visível
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 80;
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute('id');
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      menuLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+
+  // 6.2 Esconde o header ao descer, mostra ao subir
+  if (scrollY > lastScrollY && scrollY > 150) {
+    header.style.transform = "translateY(-100%)";
+  } else {
+    header.style.transform = "translateY(0)";
+  }
+
+  lastScrollY = scrollY;
+}
+
+// 6.3 Listener com debounce (evita chamadas excessivas em scroll)
+window.addEventListener('scroll', () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(handleScroll, 100);
 });
