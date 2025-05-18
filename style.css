@@ -429,6 +429,15 @@ section h2 {
     color: #555;
     margin-top: 20px;
   }
+
+  .footer-divider {
+   border-top: 1px solid #e63946;
+   width: 100vw;
+   position: relative;
+   left: 50%;
+   transform: translateX(-50%);
+   margin: 30px 0;
+}
   
   .section-divider {
   height: 50px;
