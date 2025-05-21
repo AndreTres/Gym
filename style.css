@@ -521,6 +521,12 @@ section h2 {
     color: #e63946;
   }
 
+  .start p,
+  .subheadline {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
   .theme-toggle {
     background: none;
     border: none;
