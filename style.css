@@ -652,7 +652,7 @@ h1 {
     font-size: 16px;
   }
 
-  .valor img {
+  .valor1 img, .valor2img {
     max-width: 200px;
   }
 
@@ -792,3 +792,4 @@ body.light-mode footer {
 body.light-mode .footer-socials a {
   color: #e63946;
 }
+
